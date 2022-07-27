@@ -1,0 +1,10 @@
+[{
+    "id": "0",
+    "name": "20W apple charger",
+    "realImage": "https://null.com",
+    "state": ["Working"],
+    "images": ["/imgs/20w-plug-1.jpg", "/imgs/20w-plug-2.jpg", "/imgs/20w-plug-3.jpg"],
+    "forSale": "No",
+    "saleLink": "#",
+    "missing": false
+}]

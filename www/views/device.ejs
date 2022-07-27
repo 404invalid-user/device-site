@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>
+        window.process = BrowserFS.BFSRequire('process');
+        window.Buffer = BrowserFS.BFSRequire('buffer').Buffer;
+    </script>
+
+    <meta charset="utf-8" />
+    <title>
+        <%= device.name %>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/assets/device.css">
+    <script>
+        var device = <% JSON.stringify(device) %>;
+    </script>
+    <script src="/assets/device.js"></script>
+</head>
+
+<body>
+    <h2 class="global-margin">Devices</h2>
+    <hr>
+    <div class="flex-wrap global-margin">
+        <h1 class="name">
+            <%= device.name %>
+        </h1>
+        <div class="images">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <% for (const img of device.images) { %>
+                        <img src="<%= img %>" alt="device image" class="swiper-slide">
+                        <% } %>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="texts">
+                <div class="info-text">
+                    <img src="/assets/graph.svg" alt="graph">
+                    <p><b>State:</b>
+                        <a href="#">
+                            <%= device.state.join(', ') %>
+                        </a>
+                    </p>
+                </div>
+                <div class="info-text">
+                    <img src="/assets/bag.svg" alt="bag">
+                    <p><b>For Sale:</b>
+                        <a href="<%= device.saleLink %>">
+                            <%= device.forSale %>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <a href="<%= device.realImage %>" class="button alt">See Real Device</a>
+            <a href="<%= conf.contactLink.replace('<subject>', `regarding ${device.name} (${device.id})`) %>" class="button">Contact Me</a>
+        </div>
+    </div>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+</body>
+
+</html>

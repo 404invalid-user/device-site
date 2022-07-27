@@ -1,0 +1,117 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: rgb(0, 162, 255);
+    text-decoration: none
+}
+
+.button {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 17px;
+    line-height: 1.17648;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    min-width: 28px;
+    padding: 8px 16px;
+    background: #0071e3;
+    color: #fff;
+    margin: 0.4rem 0;
+}
+
+.button.alt {
+    background-color: rgb(19, 19, 19);
+}
+
+.name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 1.9rem 0;
+}
+
+.images {
+    position: relative;
+    height: 100%;
+    margin: 3rem 0;
+}
+
+.global-margin {
+    margin: 0 5%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texts {
+    margin: 4rem 0 3rem;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.info-text img {
+    height: 30px;
+    margin-right: 0.3rem;
+}
