@@ -54,7 +54,6 @@ module.exports.addDeviceView = async(req, deviceid,inLostMode) => {
     let ip = req.ip.replace('::ffff:','').split(':')[0];
     let geo = await geoip.lookup(ip);
 
-    console.log(req.ip)
     let location = "error could not get, unknown";
     try {
         location =geo ? geo.region : "unknown" + ", " + geo ? geo.country : "unknown";
