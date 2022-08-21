@@ -1,5 +1,5 @@
 module.exports = {
-    port: 5500,
+    port: 8080,
     contactLink: "mailto:invaliduser@bruvland.com?subject=<subject>",
     emailServer: {
         server: "",
@@ -8,5 +8,6 @@ module.exports = {
         email: "",
         name: "",
         password: "MOVED SEE .env file"
-    }
+    },
+    name: "invaliduser"
 }

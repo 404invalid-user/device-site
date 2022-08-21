@@ -1,4 +1,5 @@
 const path = require('path')
+const conf = require('../conf');
 module.exports = (req, res) => {
-    res.render('index')
+    return res.render('index', {conf: conf});
 }
